@@ -1,0 +1,17 @@
+# Entorno de desarrollo (VS Code)
+.vscode/
+
+# Historial y temporales de Jupyter Notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Caché de ejecución de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Archivos ocultos del sistema operativo
+.DS_Store
+Thumbs.db
