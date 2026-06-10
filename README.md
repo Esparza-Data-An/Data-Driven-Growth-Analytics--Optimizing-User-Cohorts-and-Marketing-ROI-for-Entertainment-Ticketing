@@ -94,6 +94,7 @@ By mapping cross-dataset interactions, customer acquisition costs (CAC) and Retu
    * Given that users who take 8 to 30 days to convert spend the most money per ticket ($7.82), dedicate a slice of the low-cost acquisition budget (via Source 4 or 9) to retarget users who visited the site 7 days ago but haven't checked out yet. Their high basket values justify targeted email and display-ad retargeting workflows.
 
 ## Project Structure
+
 ├── datasets/
 │   ├── visits_log_us.csv       # Platform interaction logs
 │   ├── orders_log_us.csv       # Purchase transactional logs
