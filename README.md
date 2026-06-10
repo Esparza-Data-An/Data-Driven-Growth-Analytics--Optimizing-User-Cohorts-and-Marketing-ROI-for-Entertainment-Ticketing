@@ -95,6 +95,8 @@ By mapping cross-dataset interactions, customer acquisition costs (CAC) and Retu
 
 ## Project Structure
 
+```text
+.
 ├── datasets/
 │   ├── visits_log_us.csv       # Platform interaction logs
 │   ├── orders_log_us.csv       # Purchase transactional logs
