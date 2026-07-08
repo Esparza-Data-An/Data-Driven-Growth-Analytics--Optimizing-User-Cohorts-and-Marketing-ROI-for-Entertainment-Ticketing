@@ -1,6 +1,6 @@
-# Growth Analytics & Marketing ROI for Ticketing (Showz)
+# Growth Analytics & Marketing ROI for Ticketing 
 
-This project analyzes user behavior and marketing channel efficiency for an entertainment ticketing platform (*Showz*). The primary goal is to optimize advertising spend, identify high-value customer cohorts, and generate actionable, data-driven recommendations.
+This project analyzes user behavior and marketing channel efficiency for an entertainment ticketing platform. The primary goal is to optimize advertising spend, identify high-value customer cohorts, and generate actionable, data-driven recommendations.
 
 ## Project Context
 
@@ -43,6 +43,37 @@ Behavioral metrics (retention, duration, cohort quality) were cross-referenced w
 | **3 (Maintain)** | **Source 2** | Maintain and apply nurturing (email at days 5 and 15) to push users towards the high-value C8-30 cohort. |
 | **3 (Monitor)** | **Source 9** | Maintain minimum budget. This is a late-buyer channel (C30+). Monitor LTV over time. |
 
+
+## Interactive Dashboard (Power BI)
+
+The exploratory analysis and marketing findings have been consolidated into a Power BI dashboard to enable interactive exploration of the data. The `.pbix` file is located in the root of the project.
+
+### Dashboard Structure
+
+**1. Page 1: Executive Summary**
+- Global KPIs: Total Users, Revenue, Orders, and Conversion Rate.
+- LTV by cohort: Visually identifies C8-30 as the most valuable cohort ($13.47).
+- ROMI by channel: Compares the profitability of marketing sources (Source 1 = 49%, Source 3 = -61%).
+
+**2. Page 2: Marketing Efficiency**
+- Grouped bar chart showing CAC and ROMI per channel (`source_id`).
+- Detailed table with traffic quality metrics (retention, duration, buyer percentage).
+- *(Note: Cohort filters do not apply here, as ROMI and CAC are fixed metrics per acquisition channel).*
+
+**3. Page 3: Cohort Analysis**
+- LTV, Average Ticket, and Orders per User segmented by cohort (C0, C1, C2-7, C8-30, C30+).
+- **Interactive filter:** Allows selecting `desktop` or `touch` to see how LTV varies per cohort by device.
+
+### How to use it
+1. Download the `growth_analytics_dashboard` file.
+2. Open it with Power BI Desktop (free).
+3. Explore the pages and use the slicers to drill down into user segments and channels.
+
+### Preview (Screenshots)
+![Executive Summary](images/dashboard_page1.png)
+![Marketing](images/dashboard_page2.png)
+![Cohorts](images/dashboard_page3.png)
+
 ## Project Structure
 
 ```text
@@ -54,6 +85,11 @@ Behavioral metrics (retention, duration, cohort quality) were cross-referenced w
 │   ├── costs_us.csv
 │   ├── orders_log_us.csv
 │   └── visits_log_us.csv
+├── images/
+│     ├──dashboard_page1.png
+│     ├──dashboard_page2.png
+│     ├──dashboard_page3.png
 ├── growth_analytics_v2.ipynb
+├── growth_analytics_dashboard.pbix
 ├── README_ENG.md
 └── README_ESP.md

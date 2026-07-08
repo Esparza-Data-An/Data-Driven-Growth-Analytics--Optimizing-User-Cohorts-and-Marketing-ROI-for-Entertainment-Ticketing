@@ -1,6 +1,6 @@
-# Análisis de Crecimiento y ROI de Marketing para Ticketing (Showz)
+# Análisis de Crecimiento y ROI de Marketing para Ticketing 
 
-Este proyecto analiza el comportamiento de los usuarios y la eficiencia de los canales de marketing para una plataforma de venta de entradas (*Showz*). El objetivo principal es optimizar la inversión publicitaria, identificar cohortes de clientes de alto valor y generar recomendaciones accionables basadas en datos.
+Este proyecto analiza el comportamiento de los usuarios y la eficiencia de los canales de marketing para una plataforma de venta de entradas. El objetivo principal es optimizar la inversión publicitaria, identificar cohortes de clientes de alto valor y generar recomendaciones accionables basadas en datos.
 
 ## Contexto del Proyecto
 
@@ -43,6 +43,36 @@ Se cruzaron las métricas de comportamiento (retención, duración y calidad de 
 | **3 (Mantener)** | **Source 2** | Mantener y aplicar *nurturing* (email a los 5 y 15 días) para empujarlos a la cohorte C8-30 (la de mayor valor). |
 | **3 (Vigilar)** | **Source 9** | Mantener presupuesto mínimo. Es un canal de compradores tardíos (C30+). Monitorear su LTV a largo plazo. |
 
+## Dashboard Interactivo (Power BI)
+
+El análisis exploratorio y los hallazgos de marketing se han consolidado en un dashboard de Power BI para facilitar la exploración interactiva de los datos. El archivo `.pbix` se encuentra en la raíz del proyecto.
+
+### Estructura del Dashboard
+
+**1. Página 1: Resumen Ejecutivo**
+- KPIs globales: Total de usuarios, Ingresos, Pedidos y Tasa de Conversión.
+- LTV por cohorte: Identifica visualmente que C8-30 es la cohorte más valiosa ($13.47).
+- ROMI por canal: Compara la rentabilidad de las fuentes de marketing (Source 1 = 49%, Source 3 = -61%).
+
+**2. Página 2: Eficiencia de Marketing**
+- Gráfico de barras agrupadas mostrando CAC y ROMI por cada canal (`source_id`).
+- Tabla detallada con las métricas de calidad de tráfico (retención, duración, porcentaje de compradores).
+- *(Nota: Los filtros de cohorte no se aplican aquí, ya que el ROMI y el CAC son métricas fijas por canal de adquisición).*
+
+**3. Página 3: Análisis de Cohortes**
+- LTV, Ticket Promedio y Pedidos por Usuario segmentados por cohorte (C0, C1, C2-7, C8-30, C30+).
+- **Filtro interactivo:** Permite seleccionar `desktop` o `touch` para ver cómo varía el LTV de cada cohorte según el dispositivo.
+
+### Cómo usarlo
+1. Descarga el archivo `growth_analytics_dashboard`.
+2. Ábrelo con Power BI Desktop (gratuito).
+3. Explora las páginas y utiliza los filtros (slicers) para profundizar en los segmentos de usuarios y canales.
+
+### Vista previa (Capturas de pantalla)
+![Resumen Ejecutivo](images/dashboard_page1.png)
+![Marketing](images/dashboard_page2.png)
+![Cohortes](images/dashboard_page3.png)
+
 ## Estructura del Proyecto
 
 ```text
@@ -54,7 +84,12 @@ Se cruzaron las métricas de comportamiento (retención, duración y calidad de 
 │   ├── costs_us.csv
 │   ├── orders_log_us.csv
 │   └── visits_log_us.csv
+├── images/
+│     ├──dashboard_page1.png
+│     ├──dashboard_page2.png
+│     ├──dashboard_page3.png
 ├── growth_analytics_v2.ipynb
+├── growth_analytics_dashboard.pbix
 ├── README_ENG.md
 └── README_ESP.md
 
